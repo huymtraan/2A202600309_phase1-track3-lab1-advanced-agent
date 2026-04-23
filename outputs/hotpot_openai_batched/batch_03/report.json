@@ -1,0 +1,556 @@
+{
+  "meta": {
+    "dataset": "hotpot_100.json:batch_03",
+    "mode": "openai",
+    "num_records": 50,
+    "agents": [
+      "react",
+      "reflexion"
+    ]
+  },
+  "summary": {
+    "react": {
+      "count": 25,
+      "em": 0.88,
+      "avg_attempts": 1,
+      "avg_token_estimate": 1226.32,
+      "avg_latency_ms": 1969.92
+    },
+    "reflexion": {
+      "count": 25,
+      "em": 0.92,
+      "avg_attempts": 1.12,
+      "avg_token_estimate": 1499.56,
+      "avg_latency_ms": 2528.12
+    },
+    "delta_reflexion_minus_react": {
+      "em_abs": 0.04,
+      "attempts_abs": 0.12,
+      "tokens_abs": 273.24,
+      "latency_abs": 558.2
+    }
+  },
+  "failure_modes": {
+    "react": {
+      "none": 22,
+      "wrong_final_answer": 3
+    },
+    "reflexion": {
+      "none": 23,
+      "wrong_final_answer": 2
+    },
+    "overall": {
+      "none": 45,
+      "wrong_final_answer": 5
+    }
+  },
+  "examples": [
+    {
+      "qid": "5a736bfa5542991f29ee2e03",
+      "agent_type": "react",
+      "gold_answer": "Glenn Hughes",
+      "predicted_answer": "Glenn Hughes is older than Ross Lynch.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5addfe6c5542997dc790710e",
+      "agent_type": "react",
+      "gold_answer": "March 28, 1941",
+      "predicted_answer": "1941",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a7a0a965542996c55b2dce7",
+      "agent_type": "react",
+      "gold_answer": "standard gauge track",
+      "predicted_answer": "standard gauge track",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a8ae49155429951533613a3",
+      "agent_type": "react",
+      "gold_answer": "Sex and the City",
+      "predicted_answer": "Cynthia Nixon received the 2004 Primetime Emmy Award for Outstanding Supporting Actress in a Comedy Series and a Screen Actors Guild Award for her performance in the show \"Sex and the City.\"",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a74bdbf5542996c70cfadc7",
+      "agent_type": "react",
+      "gold_answer": "Kato",
+      "predicted_answer": "Lee Jun-fan played the character Kato in \"The Green Hornet\" television series.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ab99943554299131ca42391",
+      "agent_type": "react",
+      "gold_answer": "England",
+      "predicted_answer": "England",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a8195f35542995ce29dcc0c",
+      "agent_type": "react",
+      "gold_answer": "Province of Buenos Aires",
+      "predicted_answer": "The Estadio Unico is owned by the Province of Buenos Aires, administered jointly by the provincial government, the Municipality of La Plata, and the football clubs Estudiantes de La Plata and Gimnasia y Esgrima de la Plata.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ab70446554299110f219a94",
+      "agent_type": "react",
+      "gold_answer": "Robert Zemeckis",
+      "predicted_answer": "Robert Zemeckis",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5adbe1e755429947ff173853",
+      "agent_type": "react",
+      "gold_answer": "1932",
+      "predicted_answer": "1932",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a904e725542995651fb5118",
+      "agent_type": "react",
+      "gold_answer": "nine",
+      "predicted_answer": "Nine weeks",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a7daae35542990b8f503a1d",
+      "agent_type": "react",
+      "gold_answer": "Saint Motel",
+      "predicted_answer": "The provided context does not specify the number of members in either Saint Motel or Curve.",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "wrong_final_answer",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ae6038155429929b0807a55",
+      "agent_type": "react",
+      "gold_answer": "South Park",
+      "predicted_answer": "South Park",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a71458e5542994082a3e738",
+      "agent_type": "react",
+      "gold_answer": "Boston College",
+      "predicted_answer": "Boston College is the private research university located in Chestnut Hill, Massachusetts.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a73332b5542992359bc3287",
+      "agent_type": "react",
+      "gold_answer": "Victor John Mature",
+      "predicted_answer": "Eric Thal",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ae500fd55429908b63264d8",
+      "agent_type": "react",
+      "gold_answer": "Canada",
+      "predicted_answer": "Canada",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ab292e4554299545a2cf993",
+      "agent_type": "react",
+      "gold_answer": "Conservative",
+      "predicted_answer": "Anthony Eden was a member of the Conservative Party.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a8514545542992a431d1ad2",
+      "agent_type": "react",
+      "gold_answer": "Salaam Bombay",
+      "predicted_answer": "Howards End",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "wrong_final_answer",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ae3345f55429928c4239682",
+      "agent_type": "react",
+      "gold_answer": "yes",
+      "predicted_answer": "Yes, both Tim McIlrath and Spike Slawson are American punk rock musicians.",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "wrong_final_answer",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ac1b48f55429963665198f3",
+      "agent_type": "react",
+      "gold_answer": "Zooey Deschanel",
+      "predicted_answer": "John Goodman starred along Zooey Deschanel in Gigantic.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ab9d58855429939ce03dc3a",
+      "agent_type": "react",
+      "gold_answer": "15",
+      "predicted_answer": "15",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ab9121555429919ba4e238a",
+      "agent_type": "react",
+      "gold_answer": "Keyshia Cole",
+      "predicted_answer": "Keyshia Cole",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5abf037a5542993fe9a41dbe",
+      "agent_type": "react",
+      "gold_answer": "filmmaker",
+      "predicted_answer": "Both Am Rong and Alexandre Rockwell share the profession of being film directors.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ab3ed12554299753aec59f3",
+      "agent_type": "react",
+      "gold_answer": "Golf Magazine",
+      "predicted_answer": "Golf Magazine is owned by Time Inc.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5abcfc3b554299114383a1ad",
+      "agent_type": "react",
+      "gold_answer": "Mr. Burns",
+      "predicted_answer": "Mr. Burns funds the bowling team that includes the school bus driver for Springfield Elementary School.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a74f2ff5542993748c89748",
+      "agent_type": "react",
+      "gold_answer": "Washington, D.C.",
+      "predicted_answer": "Washington, D.C.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a736bfa5542991f29ee2e03",
+      "agent_type": "reflexion",
+      "gold_answer": "Glenn Hughes",
+      "predicted_answer": "Glenn Hughes is older than Ross Lynch.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5addfe6c5542997dc790710e",
+      "agent_type": "reflexion",
+      "gold_answer": "March 28, 1941",
+      "predicted_answer": "1941",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a7a0a965542996c55b2dce7",
+      "agent_type": "reflexion",
+      "gold_answer": "standard gauge track",
+      "predicted_answer": "standard gauge track",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a8ae49155429951533613a3",
+      "agent_type": "reflexion",
+      "gold_answer": "Sex and the City",
+      "predicted_answer": "Cynthia Nixon received the 2004 Primetime Emmy Award for Outstanding Supporting Actress in a Comedy Series and a Screen Actors Guild Award for her performance in the show \"Sex and the City.\"",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a74bdbf5542996c70cfadc7",
+      "agent_type": "reflexion",
+      "gold_answer": "Kato",
+      "predicted_answer": "Lee Jun-fan played the character Kato in \"The Green Hornet\" television series.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ab99943554299131ca42391",
+      "agent_type": "reflexion",
+      "gold_answer": "England",
+      "predicted_answer": "England",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a8195f35542995ce29dcc0c",
+      "agent_type": "reflexion",
+      "gold_answer": "Province of Buenos Aires",
+      "predicted_answer": "The Estadio Unico is owned by the Province of Buenos Aires, administered jointly by the provincial government, the Municipality of La Plata, and the football clubs Estudiantes de La Plata and Gimnasia y Esgrima de la Plata.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ab70446554299110f219a94",
+      "agent_type": "reflexion",
+      "gold_answer": "Robert Zemeckis",
+      "predicted_answer": "Robert Zemeckis",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5adbe1e755429947ff173853",
+      "agent_type": "reflexion",
+      "gold_answer": "1932",
+      "predicted_answer": "1932",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a904e725542995651fb5118",
+      "agent_type": "reflexion",
+      "gold_answer": "nine",
+      "predicted_answer": "Nine weeks",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a7daae35542990b8f503a1d",
+      "agent_type": "reflexion",
+      "gold_answer": "Saint Motel",
+      "predicted_answer": "The provided context does not contain information about the number of members in either Saint Motel or Curve, so the answer cannot be determined.",
+      "is_correct": false,
+      "attempts": 2,
+      "failure_mode": "wrong_final_answer",
+      "reflection_count": 2
+    },
+    {
+      "qid": "5ae6038155429929b0807a55",
+      "agent_type": "reflexion",
+      "gold_answer": "South Park",
+      "predicted_answer": "South Park",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a71458e5542994082a3e738",
+      "agent_type": "reflexion",
+      "gold_answer": "Boston College",
+      "predicted_answer": "Boston College is the private research university located in Chestnut Hill, Massachusetts.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a73332b5542992359bc3287",
+      "agent_type": "reflexion",
+      "gold_answer": "Victor John Mature",
+      "predicted_answer": "Eric Thal",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ae500fd55429908b63264d8",
+      "agent_type": "reflexion",
+      "gold_answer": "Canada",
+      "predicted_answer": "Canada",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ab292e4554299545a2cf993",
+      "agent_type": "reflexion",
+      "gold_answer": "Conservative",
+      "predicted_answer": "The man who officially opened the Royal Spa Centre in 1972, Anthony Eden, was associated with the Conservative Party.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a8514545542992a431d1ad2",
+      "agent_type": "reflexion",
+      "gold_answer": "Salaam Bombay",
+      "predicted_answer": "Salaam Bombay",
+      "is_correct": true,
+      "attempts": 2,
+      "failure_mode": "none",
+      "reflection_count": 1
+    },
+    {
+      "qid": "5ae3345f55429928c4239682",
+      "agent_type": "reflexion",
+      "gold_answer": "yes",
+      "predicted_answer": "Tim McIlrath is an American punk rock musician; the context does not provide enough information to confirm that Spike Slawson is an American punk rock musician.",
+      "is_correct": false,
+      "attempts": 2,
+      "failure_mode": "wrong_final_answer",
+      "reflection_count": 2
+    },
+    {
+      "qid": "5ac1b48f55429963665198f3",
+      "agent_type": "reflexion",
+      "gold_answer": "Zooey Deschanel",
+      "predicted_answer": "John Goodman starred along Zooey Deschanel in Gigantic.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ab9d58855429939ce03dc3a",
+      "agent_type": "reflexion",
+      "gold_answer": "15",
+      "predicted_answer": "15",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ab9121555429919ba4e238a",
+      "agent_type": "reflexion",
+      "gold_answer": "Keyshia Cole",
+      "predicted_answer": "Keyshia Cole",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5abf037a5542993fe9a41dbe",
+      "agent_type": "reflexion",
+      "gold_answer": "filmmaker",
+      "predicted_answer": "Both Am Rong and Alexandre Rockwell share the profession of being film directors.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ab3ed12554299753aec59f3",
+      "agent_type": "reflexion",
+      "gold_answer": "Golf Magazine",
+      "predicted_answer": "Golf Magazine is owned by Time Inc.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5abcfc3b554299114383a1ad",
+      "agent_type": "reflexion",
+      "gold_answer": "Mr. Burns",
+      "predicted_answer": "Mr. Burns funds the bowling team that includes the school bus driver for Springfield Elementary School.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a74f2ff5542993748c89748",
+      "agent_type": "reflexion",
+      "gold_answer": "Washington, D.C.",
+      "predicted_answer": "Washington, D.C.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    }
+  ],
+  "extensions": [
+    "structured_evaluator",
+    "reflection_memory",
+    "benchmark_report_json",
+    "adaptive_max_attempts"
+  ],
+  "discussion": "This benchmark compares a one-shot ReAct baseline against a multi-attempt Reflexion agent. The Reflexion loop stores concise lessons from failed attempts and feeds those lessons into the next actor call, which usually improves exact-match on questions that require multi-hop grounding. The tradeoff is increased attempts, higher token usage, and higher latency. Remaining failures typically come from incomplete evidence tracing or choosing a plausible entity without final verification against the provided context."
+}

@@ -1,0 +1,558 @@
+{
+  "meta": {
+    "dataset": "hotpot_100.json:batch_02",
+    "mode": "openai",
+    "num_records": 50,
+    "agents": [
+      "react",
+      "reflexion"
+    ]
+  },
+  "summary": {
+    "react": {
+      "count": 25,
+      "em": 0.76,
+      "avg_attempts": 1,
+      "avg_token_estimate": 1192.44,
+      "avg_latency_ms": 2283.32
+    },
+    "reflexion": {
+      "count": 25,
+      "em": 0.88,
+      "avg_attempts": 1.24,
+      "avg_token_estimate": 1782.08,
+      "avg_latency_ms": 4293.16
+    },
+    "delta_reflexion_minus_react": {
+      "em_abs": 0.12,
+      "attempts_abs": 0.24,
+      "tokens_abs": 589.64,
+      "latency_abs": 2009.84
+    }
+  },
+  "failure_modes": {
+    "react": {
+      "none": 19,
+      "wrong_final_answer": 6
+    },
+    "reflexion": {
+      "none": 22,
+      "wrong_final_answer": 2,
+      "looping": 1
+    },
+    "overall": {
+      "none": 41,
+      "wrong_final_answer": 8,
+      "looping": 1
+    }
+  },
+  "examples": [
+    {
+      "qid": "5ae3b4d05542992f92d82349",
+      "agent_type": "react",
+      "gold_answer": "Todd Phillips",
+      "predicted_answer": "Todd Phillips",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a76a401554299373536012b",
+      "agent_type": "react",
+      "gold_answer": "Carol Lawrence",
+      "predicted_answer": "Carol Lawrence",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ae3918b5542994393b9e709",
+      "agent_type": "react",
+      "gold_answer": "no",
+      "predicted_answer": "No, Pavel Urysohn and Leonid Levin were not known for the same type of work; Leonid Levin is known for work in cryptography, while Pavel Urysohn was a mathematician known for work in topology (not mentioned in the snippets but known from general knowledge).",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a8efd3c55429918e830d179",
+      "agent_type": "react",
+      "gold_answer": "no",
+      "predicted_answer": "No, The New Pornographers is a Canadian indie rock band, while Kings of Leon is an American rock band.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a8b63755542997f31a41cfe",
+      "agent_type": "react",
+      "gold_answer": "New York City",
+      "predicted_answer": "750 7th Avenue and 101 Park Avenue are located in New York City.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ac15df95542994d76dccded",
+      "agent_type": "react",
+      "gold_answer": "Amy Jo Johnson",
+      "predicted_answer": "Amy Jo Johnson",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a7a02235542996c55b2dcd3",
+      "agent_type": "react",
+      "gold_answer": "Aleksander Ford",
+      "predicted_answer": "Aleksander Ford was born first.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ac061ab554299294b218fac",
+      "agent_type": "react",
+      "gold_answer": "yes",
+      "predicted_answer": "Yes, both Jane and First for Women are women's magazines.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ab5a2f85542997d4ad1f197",
+      "agent_type": "react",
+      "gold_answer": "director",
+      "predicted_answer": "Film director",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5abd7ca05542993062266cab",
+      "agent_type": "react",
+      "gold_answer": "Roseau, Minnesota, USA",
+      "predicted_answer": "The company that purchased Aixam, Polaris Industries, is based in the United States.",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "wrong_final_answer",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a8ce5c7554299441c6b9f64",
+      "agent_type": "react",
+      "gold_answer": "The Saimaa Gesture",
+      "predicted_answer": "The Saimaa Gesture is the documentary about Finnish rock groups.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a81ff1d554299676cceb1c3",
+      "agent_type": "react",
+      "gold_answer": "David Lee Roth",
+      "predicted_answer": "David Lee Roth was inducted into the Rock and Roll Hall of Fame as a member of Van Halen.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ae732685542991e8301cbc3",
+      "agent_type": "react",
+      "gold_answer": "Nassau County",
+      "predicted_answer": "Zimbabwe's Guwe Secondary School has a sister school in Westchester County, New York.",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "wrong_final_answer",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a8a2ebc5542996c9b8d5e33",
+      "agent_type": "react",
+      "gold_answer": "Australia",
+      "predicted_answer": "Australia",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5add28c85542992ae4cec4be",
+      "agent_type": "react",
+      "gold_answer": "California",
+      "predicted_answer": "California",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a7d90195542991319bc93cf",
+      "agent_type": "react",
+      "gold_answer": "Dessau",
+      "predicted_answer": "The axial turbojet Pirna 014 was designed by engineers from BMW, a German aircraft and aircraft engine manufacturer based in Bavaria.",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "wrong_final_answer",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5abe3f9455429976d4830aaa",
+      "agent_type": "react",
+      "gold_answer": "Roman Catholic",
+      "predicted_answer": "The University of Providence is designated as a Catholic university.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5abee5e25542994516f45473",
+      "agent_type": "react",
+      "gold_answer": "The Joshua Tree",
+      "predicted_answer": "The cover song featuring Pauline Henry was from the album \"The Chimes.\"",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "wrong_final_answer",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ae78ec5554299540e5a5605",
+      "agent_type": "react",
+      "gold_answer": "Ulster County",
+      "predicted_answer": "New Paltz, Ulster County, New York",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a760a5f554299109176e629",
+      "agent_type": "react",
+      "gold_answer": "Tammy Wynette",
+      "predicted_answer": "Tammy Wynette",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a7a52745542996c55b2dd4f",
+      "agent_type": "react",
+      "gold_answer": "Sir Francis Nethersole",
+      "predicted_answer": "Francis Nethersole was born first.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ac1f7f355429964131be2ae",
+      "agent_type": "react",
+      "gold_answer": "ingredients in beer",
+      "predicted_answer": "The Hacker-Pschorr Brewery has to limit the ingredients in their beer to comply with the Reinheitsgebot (German Beer Purity Law) regulations.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a74248855429929fddd83e5",
+      "agent_type": "react",
+      "gold_answer": "Dennis Howard Marks",
+      "predicted_answer": "The context does not provide the name of the Welsh member of the Psychedelic Shamanistic Institute (PSI) who died on 10 April 2016.",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "wrong_final_answer",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5abd04f15542996e802b467e",
+      "agent_type": "react",
+      "gold_answer": "Robert Sheehan",
+      "predicted_answer": "The provided context does not specify the male actor who starred in The Messenger.",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "wrong_final_answer",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ac3ad225542995ef918c1da",
+      "agent_type": "react",
+      "gold_answer": "no",
+      "predicted_answer": "No, only Paloma is a cocktail based on tequila; Gin and tonic is based on gin.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ae3b4d05542992f92d82349",
+      "agent_type": "reflexion",
+      "gold_answer": "Todd Phillips",
+      "predicted_answer": "Todd Phillips",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a76a401554299373536012b",
+      "agent_type": "reflexion",
+      "gold_answer": "Carol Lawrence",
+      "predicted_answer": "Carol Lawrence",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ae3918b5542994393b9e709",
+      "agent_type": "reflexion",
+      "gold_answer": "no",
+      "predicted_answer": "No, Pavel Urysohn and Leonid Levin were not known for the same type of work; Pavel Urysohn was a mathematician known for his work in topology, while Leonid Levin is known for his contributions to cryptography and theoretical computer science.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a8efd3c55429918e830d179",
+      "agent_type": "reflexion",
+      "gold_answer": "no",
+      "predicted_answer": "No, The New Pornographers is a Canadian indie rock band, while Kings of Leon is an American rock band.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a8b63755542997f31a41cfe",
+      "agent_type": "reflexion",
+      "gold_answer": "New York City",
+      "predicted_answer": "New York City",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ac15df95542994d76dccded",
+      "agent_type": "reflexion",
+      "gold_answer": "Amy Jo Johnson",
+      "predicted_answer": "Amy Jo Johnson",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a7a02235542996c55b2dcd3",
+      "agent_type": "reflexion",
+      "gold_answer": "Aleksander Ford",
+      "predicted_answer": "Aleksander Ford was born first.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ac061ab554299294b218fac",
+      "agent_type": "reflexion",
+      "gold_answer": "yes",
+      "predicted_answer": "Yes, both Jane and First for Women are women's magazines.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ab5a2f85542997d4ad1f197",
+      "agent_type": "reflexion",
+      "gold_answer": "director",
+      "predicted_answer": "Film director",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5abd7ca05542993062266cab",
+      "agent_type": "reflexion",
+      "gold_answer": "Roseau, Minnesota, USA",
+      "predicted_answer": "Polaris Industries, the company that purchased Aixam, is based in Roseau, Minnesota, USA.",
+      "is_correct": true,
+      "attempts": 2,
+      "failure_mode": "none",
+      "reflection_count": 1
+    },
+    {
+      "qid": "5a8ce5c7554299441c6b9f64",
+      "agent_type": "reflexion",
+      "gold_answer": "The Saimaa Gesture",
+      "predicted_answer": "The Saimaa Gesture is the documentary about Finnish rock groups.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a81ff1d554299676cceb1c3",
+      "agent_type": "reflexion",
+      "gold_answer": "David Lee Roth",
+      "predicted_answer": "David Lee Roth was inducted into the Rock and Roll Hall of Fame as a member of Van Halen.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ae732685542991e8301cbc3",
+      "agent_type": "reflexion",
+      "gold_answer": "Nassau County",
+      "predicted_answer": "Nassau County",
+      "is_correct": true,
+      "attempts": 2,
+      "failure_mode": "none",
+      "reflection_count": 1
+    },
+    {
+      "qid": "5a8a2ebc5542996c9b8d5e33",
+      "agent_type": "reflexion",
+      "gold_answer": "Australia",
+      "predicted_answer": "Australia",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5add28c85542992ae4cec4be",
+      "agent_type": "reflexion",
+      "gold_answer": "California",
+      "predicted_answer": "California",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a7d90195542991319bc93cf",
+      "agent_type": "reflexion",
+      "gold_answer": "Dessau",
+      "predicted_answer": "The axial turbojet Pirna 014 was designed by engineers from the German aircraft and aircraft engine manufacturer based in Dessau.",
+      "is_correct": true,
+      "attempts": 2,
+      "failure_mode": "none",
+      "reflection_count": 1
+    },
+    {
+      "qid": "5abe3f9455429976d4830aaa",
+      "agent_type": "reflexion",
+      "gold_answer": "Roman Catholic",
+      "predicted_answer": "The University of Providence is designated to the Catholic faith.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5abee5e25542994516f45473",
+      "agent_type": "reflexion",
+      "gold_answer": "The Joshua Tree",
+      "predicted_answer": "The Chimes",
+      "is_correct": false,
+      "attempts": 2,
+      "failure_mode": "wrong_final_answer",
+      "reflection_count": 2
+    },
+    {
+      "qid": "5ae78ec5554299540e5a5605",
+      "agent_type": "reflexion",
+      "gold_answer": "Ulster County",
+      "predicted_answer": "New Paltz, Ulster County, New York",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a760a5f554299109176e629",
+      "agent_type": "reflexion",
+      "gold_answer": "Tammy Wynette",
+      "predicted_answer": "Tammy Wynette",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a7a52745542996c55b2dd4f",
+      "agent_type": "reflexion",
+      "gold_answer": "Sir Francis Nethersole",
+      "predicted_answer": "Francis Nethersole was born first.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ac1f7f355429964131be2ae",
+      "agent_type": "reflexion",
+      "gold_answer": "ingredients in beer",
+      "predicted_answer": "The Hacker-Pschorr Brewery has to limit the ingredients in their beer to comply with the Reinheitsgebot (German Beer Purity Law) regulations.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a74248855429929fddd83e5",
+      "agent_type": "reflexion",
+      "gold_answer": "Dennis Howard Marks",
+      "predicted_answer": "The provided context does not contain information about a Welsh member of the Psychedelic Shamanistic Institute (PSI) who died on 10 April 2016.",
+      "is_correct": false,
+      "attempts": 2,
+      "failure_mode": "looping",
+      "reflection_count": 2
+    },
+    {
+      "qid": "5abd04f15542996e802b467e",
+      "agent_type": "reflexion",
+      "gold_answer": "Robert Sheehan",
+      "predicted_answer": "The provided context does not specify the name of a male actor who starred in The Messenger.",
+      "is_correct": false,
+      "attempts": 2,
+      "failure_mode": "wrong_final_answer",
+      "reflection_count": 2
+    },
+    {
+      "qid": "5ac3ad225542995ef918c1da",
+      "agent_type": "reflexion",
+      "gold_answer": "no",
+      "predicted_answer": "No, only Paloma is a cocktail based on tequila; Gin and tonic is based on gin.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    }
+  ],
+  "extensions": [
+    "structured_evaluator",
+    "reflection_memory",
+    "benchmark_report_json",
+    "adaptive_max_attempts"
+  ],
+  "discussion": "This benchmark compares a one-shot ReAct baseline against a multi-attempt Reflexion agent. The Reflexion loop stores concise lessons from failed attempts and feeds those lessons into the next actor call, which usually improves exact-match on questions that require multi-hop grounding. The tradeoff is increased attempts, higher token usage, and higher latency. Remaining failures typically come from incomplete evidence tracing or choosing a plausible entity without final verification against the provided context."
+}

@@ -1,0 +1,558 @@
+{
+  "meta": {
+    "dataset": "hotpot_100.json:batch_01",
+    "mode": "openai",
+    "num_records": 50,
+    "agents": [
+      "react",
+      "reflexion"
+    ]
+  },
+  "summary": {
+    "react": {
+      "count": 25,
+      "em": 0.36,
+      "avg_attempts": 1,
+      "avg_token_estimate": 1411.04,
+      "avg_latency_ms": 4185.48
+    },
+    "reflexion": {
+      "count": 25,
+      "em": 0.8,
+      "avg_attempts": 1.6,
+      "avg_token_estimate": 2853.64,
+      "avg_latency_ms": 5438.24
+    },
+    "delta_reflexion_minus_react": {
+      "em_abs": 0.44,
+      "attempts_abs": 0.6,
+      "tokens_abs": 1442.6,
+      "latency_abs": 1252.76
+    }
+  },
+  "failure_modes": {
+    "react": {
+      "wrong_final_answer": 15,
+      "none": 9,
+      "incomplete_multi_hop": 1
+    },
+    "reflexion": {
+      "wrong_final_answer": 5,
+      "none": 20
+    },
+    "overall": {
+      "wrong_final_answer": 20,
+      "none": 29,
+      "incomplete_multi_hop": 1
+    }
+  },
+  "examples": [
+    {
+      "qid": "5a7a06935542990198eaf050",
+      "agent_type": "react",
+      "gold_answer": "Arthur's Magazine",
+      "predicted_answer": "Arthur's Magazine was started first.",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "wrong_final_answer",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a879ab05542996e4f30887e",
+      "agent_type": "react",
+      "gold_answer": "Delhi",
+      "predicted_answer": "The Oberoi family is part of The Oberoi Group, an Indian hotel company; however, the provided context does not specify the city of its head office.",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "wrong_final_answer",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a8d7341554299441c6b9fe5",
+      "agent_type": "react",
+      "gold_answer": "President Richard Nixon",
+      "predicted_answer": "Matt Groening named the \"The Simpsons\" character Milhouse after Richard Milhous Nixon.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a82171f5542990a1d231f4a",
+      "agent_type": "react",
+      "gold_answer": "American",
+      "predicted_answer": "The provided context does not specify the nationality of James Henry Miller's wife.",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "wrong_final_answer",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a84dd955542997b5ce3ff79",
+      "agent_type": "react",
+      "gold_answer": "alcohol",
+      "predicted_answer": "Alcohol is the chemical in which Cadmium Chloride is slightly soluble; alcohol is also called ethanol.",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "wrong_final_answer",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a7e36045542991319bc9440",
+      "agent_type": "react",
+      "gold_answer": "Jonathan Stark",
+      "predicted_answer": "Henri Leconte won more Grand Slam titles than Jonathan Stark.",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "wrong_final_answer",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5adf44985542993a75d2646d",
+      "agent_type": "react",
+      "gold_answer": "Crambidae",
+      "predicted_answer": "Eutrapela",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "wrong_final_answer",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a832c3455429954d2e2ec41",
+      "agent_type": "react",
+      "gold_answer": "Badr Hari",
+      "predicted_answer": "Kick Boxer was once considered the best kick boxer in the world, however he has been involved in a number of controversies relating to his \"unsportsmanlike conducts\" in the sport and crimes of violence outside of the ring.",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "wrong_final_answer",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a7d0db955429909bec76924",
+      "agent_type": "react",
+      "gold_answer": "2006",
+      "predicted_answer": "The Dutch-Belgian television series \"Het Huis Anubis\" that \"House of Anubis\" was based on first aired in 2009.",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "wrong_final_answer",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a89372855429951533612e6",
+      "agent_type": "react",
+      "gold_answer": "6.213 km long",
+      "predicted_answer": "The length of the track where the 2013 Liqui Moly Bathurst 12 Hour was staged is 6.213 km.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5abd90545542996e802b47d7",
+      "agent_type": "react",
+      "gold_answer": "Jaime Meline",
+      "predicted_answer": "El-P",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "incomplete_multi_hop",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5aba66c855429939ce03dcdb",
+      "agent_type": "react",
+      "gold_answer": "Walter Darwin Coy",
+      "predicted_answer": "The narrator of \"Frontier\" who starred in \"Gunmen from Laredo\" is William Smith.",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "wrong_final_answer",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a7722d655429966f1a36c99",
+      "agent_type": "react",
+      "gold_answer": "United States",
+      "predicted_answer": "The form of music played by Die Rh\u00f6ner S\u00e4uw\u00e4ntzt originated in the United States as Skiffle.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ade025e5542997dc790711e",
+      "agent_type": "react",
+      "gold_answer": "Super Bowl XLVIII",
+      "predicted_answer": "Super Bowl XLVIII",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ab381b155429969a97a816b",
+      "agent_type": "react",
+      "gold_answer": "US 60",
+      "predicted_answer": "U.S. Highway 60",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ae0d91e55429924de1b7198",
+      "agent_type": "react",
+      "gold_answer": "2006",
+      "predicted_answer": "Annette Bening, a four-time Academy Award nominee who starred in the 1988 American comedy film The Great Outdoors, received a star on the Hollywood Walk of Fame in 2006.",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "wrong_final_answer",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ac2a5d455429921a00ab01b",
+      "agent_type": "react",
+      "gold_answer": "Hetfield and Ulrich, longtime lead guitarist Kirk Hammett, and bassist Robert Trujillo.",
+      "predicted_answer": "The current members of the American heavy metal band Metallica, who wrote the music for Hurt Locker The Musical, are James Hetfield, Lars Ulrich, Kirk Hammett, and Robert Trujillo.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5adc1309554299438c868d3b",
+      "agent_type": "react",
+      "gold_answer": "Fox",
+      "predicted_answer": "Fox",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a83168855429966c78a6b2e",
+      "agent_type": "react",
+      "gold_answer": "2017",
+      "predicted_answer": "2017",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ab698885542995eadef002a",
+      "agent_type": "react",
+      "gold_answer": "Nevada",
+      "predicted_answer": "Nevada",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ab345db55429969a97a8122",
+      "agent_type": "react",
+      "gold_answer": "Hawaii",
+      "predicted_answer": "The drug stores with CEO Warren Bryant are located in Michigan.",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "wrong_final_answer",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5adf732a5542993a75d264e9",
+      "agent_type": "react",
+      "gold_answer": "Kelli Ward",
+      "predicted_answer": "The provided context does not specify which American politician Maurice A. Donahue replaced.",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "wrong_final_answer",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ac2a912554299218029dae8",
+      "agent_type": "react",
+      "gold_answer": "The Wolfhounds",
+      "predicted_answer": "The Wolfhounds were founded first.",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "wrong_final_answer",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a7272eb5542997f827839d7",
+      "agent_type": "react",
+      "gold_answer": "16-year-old",
+      "predicted_answer": "The female main protagonist of Catching Fire, Katniss Everdeen, is 17 years old.",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "wrong_final_answer",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ac2c3545542990b17b1548b",
+      "agent_type": "react",
+      "gold_answer": "World War II",
+      "predicted_answer": "Chang Ucchin was born in Korea during a time that ended with the conclusion of the Second Republic of South Korea.",
+      "is_correct": false,
+      "attempts": 1,
+      "failure_mode": "wrong_final_answer",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a7a06935542990198eaf050",
+      "agent_type": "reflexion",
+      "gold_answer": "Arthur's Magazine",
+      "predicted_answer": "The provided context does not contain information about the start dates of Arthur's Magazine or First for Women.",
+      "is_correct": false,
+      "attempts": 2,
+      "failure_mode": "wrong_final_answer",
+      "reflection_count": 2
+    },
+    {
+      "qid": "5a879ab05542996e4f30887e",
+      "agent_type": "reflexion",
+      "gold_answer": "Delhi",
+      "predicted_answer": "New Delhi",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a8d7341554299441c6b9fe5",
+      "agent_type": "reflexion",
+      "gold_answer": "President Richard Nixon",
+      "predicted_answer": "Matt Groening named the character Milhouse after Richard Milhous Nixon.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a82171f5542990a1d231f4a",
+      "agent_type": "reflexion",
+      "gold_answer": "American",
+      "predicted_answer": "The information about the nationality of James Henry Miller's wife is not available in the provided context.",
+      "is_correct": false,
+      "attempts": 2,
+      "failure_mode": "wrong_final_answer",
+      "reflection_count": 2
+    },
+    {
+      "qid": "5a84dd955542997b5ce3ff79",
+      "agent_type": "reflexion",
+      "gold_answer": "alcohol",
+      "predicted_answer": "Alcohol",
+      "is_correct": true,
+      "attempts": 2,
+      "failure_mode": "none",
+      "reflection_count": 1
+    },
+    {
+      "qid": "5a7e36045542991319bc9440",
+      "agent_type": "reflexion",
+      "gold_answer": "Jonathan Stark",
+      "predicted_answer": "The context does not provide information on Jonathan Stark's Grand Slam titles, so it is insufficient to determine which player won more Grand Slam titles.",
+      "is_correct": false,
+      "attempts": 2,
+      "failure_mode": "wrong_final_answer",
+      "reflection_count": 2
+    },
+    {
+      "qid": "5adf44985542993a75d2646d",
+      "agent_type": "reflexion",
+      "gold_answer": "Crambidae",
+      "predicted_answer": "The provided context does not specify any genus of moth found in India that contains only one species.",
+      "is_correct": false,
+      "attempts": 2,
+      "failure_mode": "wrong_final_answer",
+      "reflection_count": 2
+    },
+    {
+      "qid": "5a832c3455429954d2e2ec41",
+      "agent_type": "reflexion",
+      "gold_answer": "Badr Hari",
+      "predicted_answer": "Badr Hari",
+      "is_correct": true,
+      "attempts": 2,
+      "failure_mode": "none",
+      "reflection_count": 1
+    },
+    {
+      "qid": "5a7d0db955429909bec76924",
+      "agent_type": "reflexion",
+      "gold_answer": "2006",
+      "predicted_answer": "2006",
+      "is_correct": true,
+      "attempts": 2,
+      "failure_mode": "none",
+      "reflection_count": 1
+    },
+    {
+      "qid": "5a89372855429951533612e6",
+      "agent_type": "reflexion",
+      "gold_answer": "6.213 km long",
+      "predicted_answer": "The length of the track where the 2013 Liqui Moly Bathurst 12 Hour was staged is 6.213 km.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5abd90545542996e802b47d7",
+      "agent_type": "reflexion",
+      "gold_answer": "Jaime Meline",
+      "predicted_answer": "Jaime Meline",
+      "is_correct": true,
+      "attempts": 2,
+      "failure_mode": "none",
+      "reflection_count": 1
+    },
+    {
+      "qid": "5aba66c855429939ce03dcdb",
+      "agent_type": "reflexion",
+      "gold_answer": "Walter Darwin Coy",
+      "predicted_answer": "Walter Darwin Coy",
+      "is_correct": true,
+      "attempts": 2,
+      "failure_mode": "none",
+      "reflection_count": 1
+    },
+    {
+      "qid": "5a7722d655429966f1a36c99",
+      "agent_type": "reflexion",
+      "gold_answer": "United States",
+      "predicted_answer": "The form of music played by Die Rh\u00f6ner S\u00e4uw\u00e4ntzt originated in the United States as Skiffle.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ade025e5542997dc790711e",
+      "agent_type": "reflexion",
+      "gold_answer": "Super Bowl XLVIII",
+      "predicted_answer": "Malcolm Smith was named Most Valuable Player in Super Bowl XLVIII.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ab381b155429969a97a816b",
+      "agent_type": "reflexion",
+      "gold_answer": "US 60",
+      "predicted_answer": "U.S. Highway 60",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ae0d91e55429924de1b7198",
+      "agent_type": "reflexion",
+      "gold_answer": "2006",
+      "predicted_answer": "2006",
+      "is_correct": true,
+      "attempts": 2,
+      "failure_mode": "none",
+      "reflection_count": 1
+    },
+    {
+      "qid": "5ac2a5d455429921a00ab01b",
+      "agent_type": "reflexion",
+      "gold_answer": "Hetfield and Ulrich, longtime lead guitarist Kirk Hammett, and bassist Robert Trujillo.",
+      "predicted_answer": "The current members of the American heavy metal band Metallica, who wrote the music for Hurt Locker The Musical, are James Hetfield, Lars Ulrich, Kirk Hammett, and Robert Trujillo.",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5adc1309554299438c868d3b",
+      "agent_type": "reflexion",
+      "gold_answer": "Fox",
+      "predicted_answer": "Fox",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5a83168855429966c78a6b2e",
+      "agent_type": "reflexion",
+      "gold_answer": "2017",
+      "predicted_answer": "2017",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ab698885542995eadef002a",
+      "agent_type": "reflexion",
+      "gold_answer": "Nevada",
+      "predicted_answer": "Nevada",
+      "is_correct": true,
+      "attempts": 1,
+      "failure_mode": "none",
+      "reflection_count": 0
+    },
+    {
+      "qid": "5ab345db55429969a97a8122",
+      "agent_type": "reflexion",
+      "gold_answer": "Hawaii",
+      "predicted_answer": "Hawaii",
+      "is_correct": true,
+      "attempts": 2,
+      "failure_mode": "none",
+      "reflection_count": 1
+    },
+    {
+      "qid": "5adf732a5542993a75d264e9",
+      "agent_type": "reflexion",
+      "gold_answer": "Kelli Ward",
+      "predicted_answer": "The context does not specify which American politician Maurice A. Donahue replaced.",
+      "is_correct": false,
+      "attempts": 2,
+      "failure_mode": "wrong_final_answer",
+      "reflection_count": 2
+    },
+    {
+      "qid": "5ac2a912554299218029dae8",
+      "agent_type": "reflexion",
+      "gold_answer": "The Wolfhounds",
+      "predicted_answer": "The provided context does not include information about the founding dates of Hole or The Wolfhounds, so it is not possible to determine which band was founded first.",
+      "is_correct": true,
+      "attempts": 2,
+      "failure_mode": "none",
+      "reflection_count": 1
+    },
+    {
+      "qid": "5a7272eb5542997f827839d7",
+      "agent_type": "reflexion",
+      "gold_answer": "16-year-old",
+      "predicted_answer": "The female main protagonist of Catching Fire, Katniss Everdeen, is 16 years old.",
+      "is_correct": true,
+      "attempts": 2,
+      "failure_mode": "none",
+      "reflection_count": 1
+    },
+    {
+      "qid": "5ac2c3545542990b17b1548b",
+      "agent_type": "reflexion",
+      "gold_answer": "World War II",
+      "predicted_answer": "World War II",
+      "is_correct": true,
+      "attempts": 2,
+      "failure_mode": "none",
+      "reflection_count": 1
+    }
+  ],
+  "extensions": [
+    "structured_evaluator",
+    "reflection_memory",
+    "benchmark_report_json",
+    "adaptive_max_attempts"
+  ],
+  "discussion": "This benchmark compares a one-shot ReAct baseline against a multi-attempt Reflexion agent. The Reflexion loop stores concise lessons from failed attempts and feeds those lessons into the next actor call, which usually improves exact-match on questions that require multi-hop grounding. The tradeoff is increased attempts, higher token usage, and higher latency. Remaining failures typically come from incomplete evidence tracing or choosing a plausible entity without final verification against the provided context."
+}
